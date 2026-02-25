@@ -1,0 +1,26 @@
+name: Blessings
+version: ${version}
+main: com.blessings.Blessings
+api-version: '1.21'
+author: Server
+description: Silent blessing system for creative mode management
+softdepend: [Geyser-Spigot, floodgate]
+
+commands:
+  blessings:
+    description: Manage blessed players
+    usage: /blessings <player> or /blessings setlimit <number>
+    permission: blessings.manage
+  unbless:
+    description: Remove a blessed player
+    usage: /unbless <player>
+    permission: blessings.manage
+  delete:
+    description: Delete a player from blessing system
+    usage: /delete <player>
+    permission: blessings.manage
+
+permissions:
+  blessings.manage:
+    description: Allows managing blessed players
+    default: op
